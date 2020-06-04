@@ -102,6 +102,8 @@ class HomeFragment : Fragment(), DeleteConfirmationFragment.Listener {
                     try {
 
                         // TODO(2): Open the fingerprint dialog.
+
+                        intent.launchPendingIntent(a,MainActivity.REQUEST_FIDO2_REGISTER)
                         // - Open the fingerprint dialog by launching the intent from FIDO2 API.
 
                     } catch (e: IntentSender.SendIntentException) {

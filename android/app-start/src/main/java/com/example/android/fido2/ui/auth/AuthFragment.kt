@@ -67,6 +67,9 @@ class AuthFragment : Fragment() {
             if (intent.hasPendingIntent() && a != null) {
                 try {
 
+                    // Launch the fingerprint dialog.
+                    intent.launchPendingIntent(a, MainActivity.REQUEST_FIDO2_SIGNIN)
+
                     // TODO(5): Open the fingerprint dialog.
                     // - Open the fingerprint dialog by launching the intent from FIDO2 API.
 

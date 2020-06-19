@@ -104,7 +104,7 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
 app.use('/auth', auth);
 
 // listen for req :)
-const port = process.env.GLITCH_DEBUGGER ? null : 20201;
+const port = process.env.GLITCH_DEBUGGER ? null : 8080;
 const listener = app.listen(port || process.env.PORT, () => {
   console.log('Your app is listening on port ' + listener.address().port);
 });
